@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://cloud.aguascalientes.tecnm.mx/site/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@1&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Promedio</title>
+</head>
+<body onload="carga()">
+    <div id="contenedor">
+        <header class="titulo"><h1>Promedio</h1></header>
+        <form id="form1" name="form1">
+            <span>
+                <input type="text" name="NumMaterias" id="NumMaterias" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;">
+                <label for="NumMaterias">Ingresa el número de materias a promediar</label>
+            </span>
+            <br>
+            <span>
+                <input type="button" value="Empezar" id="empezar" onclick="passornot()">
+            </span>
+        </form>
+        <form id="form2" name="form2">
+            <span id="campos">
+            </span>
+            <p id="acumulado">Acumulado: 0</p>
+            <p id="res">Resultado: 0</p>
+            <span>
+                <input type="button" value="Calcular" id="empezar" onclick="calcular()">
+                <input type="button" value="Regresar" id="empezar" onclick="borrar_materias()">
+            </span>
+        </form>
+    </div>
+</body>
+</html>
